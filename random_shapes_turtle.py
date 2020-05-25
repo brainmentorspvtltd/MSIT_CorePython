@@ -4,7 +4,7 @@ import random
 screen = turtle.Screen()
 screen.bgcolor('black')
 pen = turtle.Pen()
-pen.color('yellow')
+#pen.color('yellow')
 pen.width(3)
 pen.turtlesize(3)
 pen.shape('turtle')
@@ -15,10 +15,18 @@ colors = ['yellow', 'gold', 'orange', 'red', 'maroon', 'violet', 'magenta', 'pur
 
 for i in range(50):
 
-    shape = random.randint(1,4)
-
-    pen.fillcolor('darkblue')
+    shape = random.randint(1,8)
+    #color1 = random.choice(colors)
+    #color2 = random.choice(colors)
+    #pen.color(color1)
+    #pen.fillcolor(color2)
+    pen.color( random.choice(colors) )
+    pen.fillcolor( random.choice(colors) )
     pen.begin_fill()
+    pen.penup()  # stop drawing
+    # pen.setposition( x-coordinate, y-coordinate )
+    pen.setposition( random.randint(-250,150), random.randint(-250,150) )
+    pen.pendown()
 
     if shape == 1:
         pen.circle(100)
@@ -33,12 +41,22 @@ for i in range(50):
             pen.forward(200)
             pen.left(90)
     elif shape == 5:
-        pass
+        for i in range(2):
+            pen.forward(300)
+            pen.left(90)
+            pen.forward(200)
+            pen.left(90)
     elif shape == 6:
-        pass
+        for i in range(5):
+            pen.forward(150)
+            pen.left(72)
     elif shape == 7:
-        pass
+        for i in range(6):
+            pen.forward(150)
+            pen.left(60)
     elif shape == 8:
-        pass
+        for i in range(3):
+            pen.forward(200)
+            pen.left(120)
 
     pen.end_fill()
