@@ -22,6 +22,7 @@ user2 = ["Guardians of the Galaxy", "Star Wars", "Planet of the Apes", "Supernat
 
 keys = list(dataset.keys())
 categoryOfWatchedMoviesCount = dict.fromkeys(keys, 0)
+
 person1 = user2
 person2 = user1
 

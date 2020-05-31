@@ -1,0 +1,23 @@
+File Handling
+
+Modes-
+1. Read
+- File should exist, if not found error will be raised
+- You won't be able to write to the file
+
+2. Write
+- If file does not exist, I will create it
+- If file exists, then I will delete the data first if present and then start writing the data to the file
+- You won't be able to read to the file
+
+3. Append
+- If file does not exist, I will create it
+- If file exists, then also I will not delete the data. I will start writing to the file from the end
+- You won't be able to read to the file
+
+4. r+
+5. w+
+6. a+
+7. rb
+8. wb
+9. csv

@@ -1,7 +1,23 @@
+# pip install babel
 from bs4 import BeautifulSoup as BS
 from urllib.request import urlopen
+from urllib.parse import urlencode
+from babel.numbers import format_currency
+from decimal import Decimal
 
-URL = "https://www.indeed.co.in/jobs?q=python&l="
+# URL = "https://www.indeed.co.in/jobs?q=python&l="
+query = input("Job title, keywords, or company: ")
+minSalary = int(input("Enter minimum monthly salary you want: "))
+minSalary = str(minSalary * 12)
+minSalary = format_currency(Decimal(minSalary), "INR")[:-3]
+
+query = f"{query} {minSalary}"
+print(query)
+
+URL = "https://www.indeed.co.in/jobs?"
+URL = URL + urlencode({"q": query, "l": "Delhi, Delhi"})
+print(URL)
+
 
 response = urlopen(URL)
 htmlSourceCode = BS(response, "lxml")
