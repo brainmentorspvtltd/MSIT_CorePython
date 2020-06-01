@@ -16,8 +16,13 @@ Modes-
 - You won't be able to read to the file
 
 4. r+
+- File should exist, if not found error will be raised
+- You can write also to the file
+
 5. w+
 6. a+
 7. rb
 8. wb
 9. csv
+some new data written using r+ mode
+some new data written using a+ mode
