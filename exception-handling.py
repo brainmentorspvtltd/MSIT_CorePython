@@ -10,11 +10,12 @@ try:
     # list1 = [0, 1, 2, 3, 4]
     # print(list1[100])
 
-    tuple1 = (0, 1, 2)
-    del tuple1[0]
+    # tuple1 = (0, 1, 2)
+    # del tuple1[0]
 
     with open("FileHandling.txt") as fileStream:
-        fileStream.write("hello")
+        # fileStream.write("hello")
+        fileStream.read()
 
 except ZeroDivisionError:
     print("Second number cannot be zero while perforimg division")
@@ -26,5 +27,9 @@ except ValueError:
     print("Please enter valid integers")
 except Exception as ex:
     print("Some exception occurred...", ex)
+finally:
+    # if fileStream != None:
+    #     fileStream.close()
+    print("Finally ran...")
 
 print("Program ends here")
